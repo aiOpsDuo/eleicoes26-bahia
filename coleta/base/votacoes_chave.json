@@ -1,0 +1,76 @@
+{
+ "descricao": "Votações nominais da Câmara dos Deputados escolhidas como 'votações-chave' do site (seleção editorial de temas de grande repercussão, 2019–2026). O id é o idVotacao dos Dados Abertos da Câmara (arquivos votacoes-{ano}.csv); o rótulo é o nome curto exibido. Nenhum juízo sobre o voto: a ficha mostra o voto oficial e o link da votação.",
+ "fonte": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-{ano}.csv",
+ "votacoes": [
+  {
+   "id": "2192459-636",
+   "rotulo": "Reforma da Previdência 1ºT (2019)",
+   "data": "2019-07-10"
+  },
+  {
+   "id": "2220292-229",
+   "rotulo": "Voto impresso PEC135 (2021)",
+   "data": "2021-08-10"
+  },
+  {
+   "id": "2293449-241",
+   "rotulo": "PEC dos Precatórios 2ºT (2021)",
+   "data": "2021-11-09"
+  },
+  {
+   "id": "2329218-135",
+   "rotulo": "PEC Kamikaze/benefícios eleitorais 1ºT (2022)",
+   "data": "2022-07-12"
+  },
+  {
+   "id": "2357053-47",
+   "rotulo": "Arcabouço fiscal (2023)",
+   "data": "2023-05-23"
+  },
+  {
+   "id": "2196833-326",
+   "rotulo": "Reforma tributária 1ºT (2023)",
+   "data": "2023-07-06"
+  },
+  {
+   "id": "2352476-149",
+   "rotulo": "PEC anistia partidos",
+   "data": "2024-07-11"
+  },
+  {
+   "id": "2383019-54",
+   "rotulo": "+ Deputados (PLP177)",
+   "data": "2025-05-06"
+  },
+  {
+   "id": "257161-454",
+   "rotulo": "Licenciamento (PL2159)",
+   "data": "2025-07-16"
+  },
+  {
+   "id": "2270800-135",
+   "rotulo": "Blindagem 1ºT",
+   "data": "2025-09-16"
+  },
+  {
+   "id": "2270800-160",
+   "rotulo": "Blindagem 2ºT",
+   "data": "2025-09-16"
+  },
+  {
+   "id": "2270800-175",
+   "rotulo": "Voto secreto (Blindagem)",
+   "data": "2025-09-17"
+  },
+  {
+   "id": "2562149-7",
+   "rotulo": "Urgência Anistia 8/1",
+   "data": "2025-09-17"
+  },
+  {
+   "id": "2358548-89",
+   "rotulo": "Dosimetria 8/1",
+   "data": "2025-12-09"
+  }
+ ]
+}

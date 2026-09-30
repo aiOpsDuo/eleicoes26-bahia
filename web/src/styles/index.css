@@ -1,0 +1,276 @@
+@import "tailwindcss";
+@import "@fontsource/anton/400.css";
+@import "@fontsource-variable/inter/wght.css";
+@import "@fontsource-variable/jetbrains-mono/wght.css";
+
+/* Tema claro por padrão. `dark:` só vale dentro de .dark (não usado ainda). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@utility z-header { z-index: 60; }
+@utility z-overlay { z-index: 65; }
+@utility z-popover { z-index: 75; }
+@utility z-skip-link { z-index: 200; }
+
+/* ------------------------------------------------------------------
+   Tokens (paleta clara/técnica). Toda cor do site sai daqui.
+   ------------------------------------------------------------------ */
+:root {
+  --background: #fafbfc;          /* fundo off-white */
+  --surface: #ffffff;             /* cards, painéis */
+  --surface-2: #f3f5f8;           /* faixas, hover */
+  --foreground: #0b0d12;          /* texto quase preto */
+  --muted-foreground: #5b6472;    /* texto secundário (5,8:1 no fundo) */
+  --subtle-foreground: #69717f;   /* terciário: ≥ 4,5:1 no branco e no fundo (AA) */
+  --grid: #e4e7ec;                /* linhas de grade e bordas */
+  --grid-strong: #cdd3dc;
+  --accent: #3b6fe0;              /* azul de destaque (4,6:1 no branco) */
+  --accent-strong: #2f5fd0;       /* hover / texto de link */
+  --accent-light: #9db8f2;        /* fim do gradiente */
+  --accent-soft: #eaf0fc;         /* fundos suaves */
+  --ring: #3b6fe0;
+  --ok: #1f7a4d;       --ok-soft: #e7f5ee;
+  --warn: #9a5b00;     --warn-soft: #fdf3e2;
+  --danger: #b42318;   --danger-soft: #fdecea;
+  --radius: 4px;
+
+  /* escala tipográfica (editorial) */
+  --text-eyebrow: 11px;
+  --text-caption: 12px;
+  --text-body-sm: 13px;
+  --text-body: 14px;
+  --text-body-lg: 16px;
+  --text-heading-sm: 22px;
+  --text-heading: 28px;
+  --text-heading-lg: 36px;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.15s;
+  --duration-normal: 0.25s;
+
+  --header-h: 64px;
+  --gradiente-destaque: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+}
+
+@theme inline {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: "Anton", "Inter Variable", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-subtle-foreground: var(--subtle-foreground);
+  --color-grid: var(--grid);
+  --color-grid-strong: var(--grid-strong);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-light: var(--accent-light);
+  --color-accent-soft: var(--accent-soft);
+  --color-ring: var(--ring);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --radius-sm: 2px;
+  --radius-md: var(--radius);
+  --radius-lg: 6px;
+  --shadow-sm: 0 1px 2px 0 rgb(11 13 18 / 0.04);
+  --shadow-md: 0 6px 16px -6px rgb(11 13 18 / 0.1), 0 2px 4px -2px rgb(11 13 18 / 0.05);
+  --shadow-lg: 0 16px 40px -12px rgb(11 13 18 / 0.16), 0 4px 8px -4px rgb(11 13 18 / 0.06);
+}
+
+@layer base {
+  * { border-color: var(--grid); }
+  html { font-family: var(--font-sans); -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    overflow-wrap: anywhere;
+  }
+  html, body { overflow-x: clip; }
+  :focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+  a { color: inherit; }
+  ::selection { background: var(--accent-soft); color: var(--foreground); }
+}
+
+/* ------------------------------------------------------------------
+   Componentes base
+   ------------------------------------------------------------------ */
+
+/* rótulo mono MAIÚSCULO com quadradinho azul: ▪ CANDIDATOS À PRESIDÊNCIA */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+.eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex: none;
+  background: var(--accent);
+}
+
+/* palavras de destaque com gradiente azul -> azul claro */
+.texto-gradiente {
+  background: var(--gradiente-destaque);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* números grandes em mono */
+.numero {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* moldura da página: linhas verticais finas nas bordas do container */
+.moldura {
+  position: relative;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  border-inline: 1px solid var(--grid);
+}
+
+/* seção com linha de grade no topo + cruzes nas interseções */
+.secao-grade {
+  position: relative;
+  border-top: 1px solid var(--grid);
+}
+.cruz {
+  position: absolute;
+  top: -6px;
+  width: 11px;
+  height: 11px;
+  pointer-events: none;
+  color: var(--grid-strong);
+  z-index: 1;
+}
+.cruz::before, .cruz::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+}
+.cruz::before { left: 5px; top: 0; width: 1px; height: 11px; }
+.cruz::after { top: 5px; left: 0; height: 1px; width: 11px; }
+.cruz-esq { left: -6px; }
+.cruz-dir { right: -6px; }
+
+/* textura de pontos suave (fundos de faixas) */
+.pontilhado {
+  background-image: radial-gradient(var(--grid-strong) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* ---------- movimento ----------
+   Princípios: curto (≤ 320 ms), só opacidade + deslocamento pequeno, nada que "pule".
+   Troca de página: View Transitions nativo (a navbar fica parada; o conteúdo cruza).
+   Dados chegando: .revelar (fade). Cards: .entrada (fade + 6px, cascata curta). */
+@keyframes surgir { from { opacity: 0; } to { opacity: 1; } }
+@keyframes subir { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.revelar { animation: surgir 0.24s ease-out both; }
+.pagina-entrada { animation: surgir 0.22s ease-out both; }
+.aba-entrada { animation: subir 0.26s var(--ease-out-expo) both; }
+.entrada { animation: subir 0.32s var(--ease-out-expo) both; }
+.entrada:nth-child(2) { animation-delay: 25ms; }
+.entrada:nth-child(3) { animation-delay: 50ms; }
+.entrada:nth-child(4) { animation-delay: 75ms; }
+.entrada:nth-child(5) { animation-delay: 100ms; }
+.entrada:nth-child(6) { animation-delay: 125ms; }
+.entrada:nth-child(7) { animation-delay: 150ms; }
+.entrada:nth-child(n+8) { animation-delay: 175ms; }
+
+/* View Transitions: navbar e rodapé ficam fixos; só o miolo cruza */
+header.fixed { view-transition-name: navbar; }
+::view-transition-group(navbar) { animation: none; }
+::view-transition-old(root) { animation: 120ms ease-in both vt-sair; }
+::view-transition-new(root) { animation: 260ms var(--ease-out-expo) 40ms both vt-entrar; }
+@keyframes vt-sair { to { opacity: 0; } }
+@keyframes vt-entrar { from { opacity: 0; transform: translateY(8px); } }
+
+/* intro do primeiro carregamento: desfoque leve + subida, em sequência */
+@keyframes intro {
+  from { opacity: 0; transform: translateY(14px); filter: blur(6px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+.primeira-carga header.fixed { animation: surgir 0.6s ease-out both; }
+.primeira-carga .intro-grupo > *,
+.primeira-carga .intro-item,
+.primeira-carga .intro-linha { animation: intro 0.8s var(--ease-out-expo) both; }
+.primeira-carga .intro-grupo > :nth-child(1) { animation-delay: calc(var(--base, 0ms) + 60ms); }
+.primeira-carga .intro-grupo > :nth-child(2) { animation-delay: calc(var(--base, 0ms) + 140ms); }
+.primeira-carga .intro-grupo > :nth-child(3) { animation-delay: calc(var(--base, 0ms) + 220ms); }
+.primeira-carga .intro-grupo > :nth-child(4) { animation-delay: calc(var(--base, 0ms) + 300ms); }
+.primeira-carga .intro-grupo > :nth-child(5) { animation-delay: calc(var(--base, 0ms) + 380ms); }
+.primeira-carga .intro-grupo > :nth-child(n+6) { animation-delay: calc(var(--base, 0ms) + 440ms); }
+.primeira-carga .intro-linha { animation-delay: 120ms; }
+.primeira-carga .intro-item { animation-delay: 40ms; }
+.primeira-carga .intro-fundo { animation: surgir 1.4s ease-out 0.3s both; }
+
+/* indicador da aba ativa que desliza */
+.indicador-aba {
+  position: absolute; bottom: 0; left: 0; height: 2px; background: var(--accent);
+  transition: transform 0.3s var(--ease-out-expo), width 0.3s var(--ease-out-expo);
+  will-change: transform, width;
+}
+
+/* barra de progresso fina (carregando) */
+@keyframes barra {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(250%); }
+}
+.barra-carregando { position: relative; overflow: hidden; }
+.barra-carregando::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  background: var(--accent);
+  animation: barra 1s ease-in-out infinite;
+}
+
+/* linha da lista com realce à esquerda */
+.linha-hover { position: relative; transition: background var(--duration-fast) ease; }
+.linha-hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transition: transform var(--duration-normal) var(--ease-out-expo);
+}
+.linha-hover:hover { background: var(--surface-2); }
+.linha-hover:hover::before, .linha-hover:focus-within::before { transform: scaleY(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .entrada, .pagina-entrada, .aba-entrada, .revelar { animation: none; }
+  .primeira-carga *, .primeira-carga header.fixed { animation: none !important; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+  .indicador-aba { transition: none; }
+  .barra-carregando::after { animation-duration: 3s; }
+  .linha-hover::before { transition: none; }
+  * { scroll-behavior: auto !important; }
+}

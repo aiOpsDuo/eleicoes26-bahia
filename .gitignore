@@ -1,0 +1,32 @@
+# segredos, notas internas e configuração local
+.mcp.json
+.env
+.env.*
+.claude/
+*.local.md
+
+# ambientes e dependências
+.venv/
+node_modules/
+
+# cache da coleta (downloads oficiais, ~4,5 GB) e bancos de trabalho
+.cache/
+*.duckdb
+
+# gerados: build do front, versão estática e dump do banco (coleta/run_all.sh --dump)
+web/dist/
+publicar/
+estatico/saida/
+db/ba2026.dump
+
+# sistema
+.DS_Store
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
+
+# fotos do TSE: geradas pela coleta (coleta/carregar/92_fotos_tse.py)
+web/public/fotos/tse/

@@ -1,0 +1,18 @@
+{
+  "name": "ba2026-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "API somente leitura (GET, JSON) sobre o banco ba2026.",
+  "scripts": {
+    "dev": "SERVIR_FRONT=0 LIMITE_POR_MINUTO=0 node --watch server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
+  }
+}

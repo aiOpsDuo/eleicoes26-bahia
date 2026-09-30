@@ -1,0 +1,266 @@
+{
+ "descricao": "Catálogo das fontes oficiais usadas no banco ba2026 (tabela `fonte`). O id de cada fonte é a posição nesta lista (acrescente sempre no fim). A data de coleta vem do cache da coleta (<cache>/_fontes/<chave>.json); `coletado_em` aqui só é usado quando a fonte não é baixada (ex.: calendário).",
+ "fontes": [
+  {
+   "chave": "tse_cand_2026",
+   "nome": "TSE — Candidatos 2026 (consulta_cand)",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2026.zip",
+   "descricao": "Registro de candidaturas 2026, recorte BA (arquivo consulta_cand_2026_BA.csv).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)",
+   "pagina": "https://dadosabertos.tse.jus.br/dataset/candidatos-2026"
+  },
+  {
+   "chave": "tse_bens_2026",
+   "nome": "TSE — Bens declarados 2026",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/bem_candidato/bem_candidato_2026.zip",
+   "descricao": "Declaração de bens dos candidatos 2026 (BA).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_cand_compl_2026",
+   "nome": "TSE — Candidatos 2026, dados complementares",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand_complementar/consulta_cand_complementar_2026.zip",
+   "descricao": "Situação do julgamento do registro, município de nascimento, declarou bens (S/N).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_rede_social_2026",
+   "nome": "TSE — Redes sociais dos candidatos 2026",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/rede_social_candidato_2026.zip",
+   "descricao": "Sites e redes sociais informados no registro da candidatura.",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_cand_2022",
+   "nome": "TSE — Candidatos 2022",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2022.zip",
+   "descricao": "Candidaturas de 2022 na BA (ligadas às de 2026 pelo CPF, só dentro da montagem; o CPF não vai para o banco).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_cand_2018",
+   "nome": "TSE — Candidatos 2018",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2018.zip",
+   "descricao": "Candidaturas de 2018 na BA.",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_bens_2022",
+   "nome": "TSE — Bens declarados 2022",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/bem_candidato/bem_candidato_2022.zip",
+   "descricao": "Bens declarados em 2022 (BA).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_bens_2018",
+   "nome": "TSE — Bens declarados 2018",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/bem_candidato/bem_candidato_2018.zip",
+   "descricao": "Bens declarados em 2018 (BA).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_votacao_2022",
+   "nome": "TSE — Votação por município e zona 2022",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/votacao_candidato_munzona/votacao_candidato_munzona_2022.zip",
+   "descricao": "Votos nominais por município (zonas somadas) dos candidatos de 2022 que concorrem em 2026.",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_eleitorado_2026",
+   "nome": "TSE — Perfil do eleitorado 2026",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/perfil_eleitorado/perfil_eleitorado_2026.zip",
+   "descricao": "Eleitores por município (BA).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_pesquisa_2026",
+   "nome": "TSE — Registro de pesquisas eleitorais 2026",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_eleitoral_2026.zip",
+   "descricao": "Registro das pesquisas (contratante, custo, metodologia). Não traz resultados.",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_coligacao_2026",
+   "nome": "TSE — Coligações e federações 2026",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_coligacao/consulta_coligacao_2026.zip",
+   "descricao": "Partidos por coligação/federação e cargo (BA).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_vagas_2026",
+   "nome": "TSE — Vagas 2026",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_vagas/consulta_vagas_2026.zip",
+   "descricao": "Número de vagas por cargo na BA.",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_calendario_2026",
+   "nome": "TSE — Calendário eleitoral 2026 (Resolução)",
+   "url": "https://www.tse.jus.br/eleicoes/eleicoes-2026/calendario-eleitoral",
+   "descricao": "Marcos do calendário digitados a partir da Resolução do TSE (coleta/montar/30_tse.py).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)",
+   "coletado_em": "2026-08-21"
+  },
+  {
+   "chave": "tse_prestacao_2026",
+   "nome": "TSE — Prestação de contas eleitorais 2026",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/prestacao_contas/prestacao_de_contas_eleitorais_candidatos_2026.zip",
+   "descricao": "Receitas, despesas contratadas e pagas dos candidatos (BA). Durante a campanha a prestação é PARCIAL.",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_prestacao_2022",
+   "nome": "TSE — Prestação de contas eleitorais 2022",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/prestacao_contas/prestacao_de_contas_eleitorais_candidatos_2022.zip",
+   "descricao": "Receitas e despesas de 2022 (BA) dos candidatos que concorrem em 2026.",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_fotos_2026",
+   "nome": "TSE — Fotos dos candidatos 2026 (BA)",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos/foto_cand2026_BA_div.zip",
+   "descricao": "Pacote oficial de fotos de divulgação das candidaturas da BA, uma imagem por SQ_CANDIDATO. Usada quando não há foto oficial da Câmara/Senado.",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_cand_2014",
+   "nome": "TSE — Candidatos 2014",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2014.zip",
+   "descricao": "Candidaturas de 2014 na BA (ligadas às de 2026 pelo CPF, só dentro da montagem).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_cand_2010",
+   "nome": "TSE — Candidatos 2010",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2010.zip",
+   "descricao": "Candidaturas de 2010 na BA (ligadas às de 2026 pelo CPF, só dentro da montagem).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_cand_2006",
+   "nome": "TSE — Candidatos 2006",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2006.zip",
+   "descricao": "Candidaturas de 2006 na BA (ligadas às de 2026 pelo CPF, só dentro da montagem).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_bens_2014",
+   "nome": "TSE — Bens declarados 2014",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/bem_candidato/bem_candidato_2014.zip",
+   "descricao": "Bens declarados em 2014 (BA).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_bens_2010",
+   "nome": "TSE — Bens declarados 2010",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/bem_candidato/bem_candidato_2010.zip",
+   "descricao": "Bens declarados em 2010 (BA).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "tse_bens_2006",
+   "nome": "TSE — Bens declarados 2006",
+   "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/bem_candidato/bem_candidato_2006.zip",
+   "descricao": "Bens declarados em 2006 (BA).",
+   "licenca": "CC-BY 4.0 (Portal de Dados Abertos do TSE)"
+  },
+  {
+   "chave": "portal_emendas",
+   "nome": "Portal da Transparência — Emendas parlamentares",
+   "url": "https://portaldatransparencia.gov.br/download-de-dados/emendas-parlamentares/UNICO",
+   "descricao": "Emendas (empenhado, liquidado, pago, restos a pagar), pagamentos por favorecido e convênios. Arquivo único, atualizado pela CGU.",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "portal_sancoes",
+   "nome": "Portal da Transparência — Cadastros de sanções (CEIS e CNEP)",
+   "url": "https://portaldatransparencia.gov.br/download-de-dados/ceis",
+   "descricao": "Cadastro de Empresas Inidôneas e Suspensas (CEIS) e Cadastro Nacional de Empresas Punidas (CNEP). Pessoas físicas candidatas são procuradas pelo CPF, só dentro da montagem.",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "transferegov_pix",
+   "nome": "Transferegov — Transferências especiais (emendas Pix)",
+   "url": "https://api-publica.transferegov.gestao.gov.br/especiais",
+   "descricao": "Planos de ação, executores, metas, empenhos e relatórios de gestão (beneficiários da BA).",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "camara_ceap",
+   "nome": "Câmara dos Deputados — Cota parlamentar (CEAP)",
+   "url": "https://www.camara.leg.br/cotas/Ano-{ano}.csv.zip",
+   "descricao": "Despesas 2019–2026 com link da nota fiscal (urlDocumento).",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "camara_votacoes",
+   "nome": "Câmara dos Deputados — Votações nominais (Dados Abertos)",
+   "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-{ano}.csv",
+   "descricao": "Votações, votos, orientações de bancada e proposições votadas, 2019–2026.",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "camara_proposicoes",
+   "nome": "Câmara dos Deputados — Proposições e autores (Dados Abertos)",
+   "url": "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-{ano}.csv",
+   "descricao": "Proposições apresentadas 2019–2026, autoria e temas.",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "camara_deputados",
+   "nome": "Câmara dos Deputados — API de deputados",
+   "url": "https://dadosabertos.camara.leg.br/api/v2/deputados?siglaUf=BA",
+   "descricao": "Deputados da BA (legislaturas 55–57), foto oficial e histórico de partido.",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "senado_ceaps",
+   "nome": "Senado Federal — Cota parlamentar (CEAPS)",
+   "url": "https://www.senado.leg.br/transparencia/LAI/verba/despesa_ceaps_{ano}.csv",
+   "descricao": "Despesas 2019–2026. O Senado não publica link da nota.",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "senado_votacoes",
+   "nome": "Senado Federal — Votações nominais (Dados Abertos)",
+   "url": "https://legis.senado.leg.br/dadosabertos/votacao",
+   "descricao": "Votos dos senadores candidatos, 2019–2026.",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "senado_processos",
+   "nome": "Senado Federal — Matérias por autor (Dados Abertos)",
+   "url": "https://legis.senado.leg.br/dadosabertos/processo",
+   "descricao": "Proposições de autoria dos senadores candidatos.",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "senado_senadores",
+   "nome": "Senado Federal — Senadores (Dados Abertos)",
+   "url": "https://legis.senado.leg.br/dadosabertos/senador/lista/atual",
+   "descricao": "Senadores em exercício da BA, mandatos e filiações partidárias; foto oficial.",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "alba_verba",
+   "nome": "Assembleia Legislativa da Bahia — Verba indenizatória",
+   "url": "https://www.al.ba.gov.br/transparencia/verbas-idenizatorias",
+   "descricao": "Lançamentos 2023–2026 com PDF da nota no portal da ALBA (valor líquido = documento − glosa).",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "alba_deputados",
+   "nome": "Assembleia Legislativa da Bahia — Deputados (portal de transparência)",
+   "url": "https://www.al.ba.gov.br/transparencia/verbas-idenizatorias",
+   "descricao": "Deputados estaduais listados no portal de verba indenizatória.",
+   "licenca": "Dado público (Lei de Acesso à Informação / Lei 12.527)"
+  },
+  {
+   "chave": "ibge_pop",
+   "nome": "IBGE — Estimativas de população (tabela 6579)",
+   "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/2024/variaveis/9324?localidades=N6[N3[29]]",
+   "descricao": "População estimada 2024 por município da BA.",
+   "licenca": "Dado público IBGE"
+  }
+ ]
+}
