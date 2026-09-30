@@ -13,4 +13,5 @@ export const HERO = {
 export const SITE = {
   titulo: "Eleições 2026 · Bahia",
   rodape: "Dados públicos oficiais — cada informação tem link para a fonte",
+  repositorio: "https://github.com/aiOpsDuo/eleicoes26-bahia",
 }

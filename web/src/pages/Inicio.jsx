@@ -11,6 +11,7 @@ import { HeroArte } from "../components/Hero.jsx"
 import { Fonte } from "../components/Fonte.jsx"
 import { CandidatoCard, CandidatoLinha, CandidatoMini } from "../components/candidato.jsx"
 import { SITE } from "../config.js"
+import { IconeGithub } from "../components/IconeGithub.jsx"
 
 const ABAS = [
   { id: "senado", rotulo: "Senado", sub: "2 vagas" },
@@ -95,6 +96,9 @@ function Hero({ dados }) {
         <div className="mt-7 flex flex-wrap gap-3">
           <Botao para="/deputado-federal" seta>Deputados federais</Botao>
           <Botao para="/senado" variante="secundario">Senado</Botao>
+          <Botao href={SITE.repositorio} variante="secundario" aria-label="Código do projeto no GitHub (abre em nova aba)">
+            <IconeGithub className="size-4" /> GitHub
+          </Botao>
         </div>
       </div>
     </Secao>

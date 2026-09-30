@@ -6,6 +6,7 @@ import { Menu as MenuIcon, X, Search } from "lucide-react"
 import { BuscaGlobal } from "./BuscaGlobal.jsx"
 import { GRUPOS } from "../../lib/rotulos.js"
 import { SITE } from "../../config.js"
+import { IconeGithub } from "../IconeGithub.jsx"
 import { juntar } from "../ui/base.jsx"
 
 export function Marca({ className }) {
@@ -132,9 +133,14 @@ function Rodape() {
     <footer className="border-t border-grid">
       <div className="moldura flex flex-col gap-3 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-10">
         <p className="eyebrow">{SITE.rodape}</p>
-        <Link to="/fontes" className="inline-flex min-h-11 items-center gap-1 font-mono text-[12px] uppercase tracking-[0.06em] text-accent-strong hover:underline">
-          Ver todas as fontes →
-        </Link>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
+          <a href={SITE.repositorio} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 font-mono text-[12px] uppercase tracking-[0.06em] text-muted-foreground hover:text-foreground hover:underline">
+            <IconeGithub className="size-4" /> Código aberto no GitHub
+          </a>
+          <Link to="/fontes" className="inline-flex min-h-11 items-center gap-1 font-mono text-[12px] uppercase tracking-[0.06em] text-accent-strong hover:underline">
+            Ver todas as fontes →
+          </Link>
+        </div>
       </div>
     </footer>
   )
